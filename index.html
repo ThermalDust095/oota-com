@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
 <head>
     
     <meta charset="UTF-8">
@@ -8,52 +10,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
-    <title>Document</title>
-    <script>
-        // var c=document.getElementsByClassName('search-input').value;
-        // console.log(c);
-        // document.getElementsByClassName('search-bar').addEventListener('click',(e)=>{
-        //     fun();
-        // })
-    document.addEventListener('DOMContentLoaded', function() {
-        var searchInput = document.getElementsByClassName('search-input')[0];
-        var searchBar = document.getElementsByClassName('searchLogo')[0];
-
-        function fun() {
-            var searchTerm = searchInput.value;
-            console.log(searchTerm);
-            window.location.href=`http://127.0.0.1:5501/second.html?item=${searchTerm}`
-        }
-
-        searchBar.addEventListener('click', fun);
-    });
-
-    </script>
+    <title>Oota</title>
+    <link rel="icon" href="./icons8-bento-100.png">
 </head>
 <body>
     <section class="main-search">
         <div>
-        <div class="navbar">
+        <div class="navbar" data-aos="zoom-in" data-aos-duration="1000">
             <div class="logoName">OOTA</div>
             <img src="icons8-bento-100.png" alt="logo.png" class="bento">
         </div>
 
-            <div class="search-style">
+            <div class="search-style" data-aos="zoom-in" data-aos-duration="1000">
                 <svg xmlns="http://www.w3.org/2000/svg" id =""class="searchLogo" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
                 <input type="text" class="search-input" placeholder="search">
             </div>
             
             
-            <svg id="yellow-thing" width="301" height="180" viewBox="0 0 301 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg  id="yellow-thing"data-aos-offset="300" data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-sine"
+             width="301" height="180" viewBox="0 0 301 180" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0826 0C5.04711 16.2493 0 34.3792 0 53.5C0 123.364 67.3811 180 150.5 180C233.619 180 301 123.364 301 53.5C301 34.3792 295.953 16.2493 286.917 0H14.0826Z" fill="#FFEC3F" fill-opacity="0.78"/>
             </svg>
                 
-            <svg id = "black-thing" width="840" height="714" viewBox="0 0 840 714" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg data-aos="fade-left" data-aos-offset="300" data-aos-duration="1000" data-aos-easing="ease-in-sine"
+             id = "black-thing" width="840" height="714" viewBox="0 0 840 714" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M148.051 -36.4846L157.639 -61H977V774H3.96295C2.02251 767.747 1 761.163 1 754.444V709.114C1 688.048 11.0564 668.247 28.0669 655.821L50.5271 639.412C57.8707 634.048 66.2439 630.258 75.1211 628.283L221.447 595.714C256.977 587.806 279.398 552.624 271.559 517.078L259.346 461.695C252.336 429.909 269.548 397.758 299.887 385.966L476.579 317.287C534.762 294.672 531.94 211.402 472.36 192.777L241.576 120.634C228.198 116.452 216.499 108.12 208.173 96.8444L156.423 26.759C142.953 8.51604 139.791 -15.3651 148.051 -36.4846Z" fill="black"/>
                 <path d="M157.639 -61V-61.5H157.298L157.174 -61.1821L157.639 -61ZM148.051 -36.4846L148.517 -36.3025L148.517 -36.3025L148.051 -36.4846ZM977 -61H977.5V-61.5H977V-61ZM977 774V774.5H977.5V774H977ZM3.96295 774L3.48541 774.148L3.59459 774.5H3.96295V774ZM28.0669 655.821L28.3618 656.224L28.3618 656.224L28.0669 655.821ZM50.5271 639.412L50.2322 639.009L50.2322 639.009L50.5271 639.412ZM75.1211 628.283L75.0125 627.794L75.0125 627.794L75.1211 628.283ZM221.447 595.714L221.338 595.226L221.338 595.226L221.447 595.714ZM271.559 517.078L272.047 516.97L272.047 516.97L271.559 517.078ZM259.346 461.695L258.858 461.803L258.858 461.803L259.346 461.695ZM299.887 385.966L300.068 386.432L300.068 386.432L299.887 385.966ZM476.579 317.287L476.76 317.753L476.76 317.753L476.579 317.287ZM472.36 192.777L472.509 192.3L472.509 192.3L472.36 192.777ZM241.576 120.634L241.426 121.111L241.426 121.111L241.576 120.634ZM208.173 96.8444L208.575 96.5474L208.575 96.5474L208.173 96.8444ZM156.423 26.759L156.825 26.462L156.825 26.462L156.423 26.759ZM157.174 -61.1821L147.586 -36.6667L148.517 -36.3025L158.105 -60.8179L157.174 -61.1821ZM977 -61.5H157.639V-60.5H977V-61.5ZM977.5 774V-61H976.5V774H977.5ZM3.96295 774.5H977V773.5H3.96295V774.5ZM0.5 754.444C0.5 761.214 1.53025 767.848 3.48541 774.148L4.44048 773.852C2.51477 767.646 1.5 761.113 1.5 754.444H0.5ZM0.5 709.114V754.444H1.5V709.114H0.5ZM27.7719 655.417C10.6325 667.938 0.5 687.888 0.5 709.114H1.5C1.5 688.208 11.4802 668.557 28.3618 656.224L27.7719 655.417ZM50.2322 639.009L27.7719 655.417L28.3618 656.224L50.8221 639.816L50.2322 639.009ZM75.0125 627.794C66.068 629.785 57.6314 633.603 50.2322 639.009L50.8221 639.816C58.1101 634.492 66.4198 630.732 75.2298 628.771L75.0125 627.794ZM221.338 595.226L75.0125 627.794L75.2298 628.771L221.555 596.202L221.338 595.226ZM271.071 517.185C278.85 552.462 256.6 587.378 221.338 595.226L221.555 596.202C257.355 588.234 279.945 552.786 272.047 516.97L271.071 517.185ZM258.858 461.803L271.071 517.185L272.047 516.97L259.834 461.588L258.858 461.803ZM299.705 385.5C269.137 397.382 251.795 429.776 258.858 461.803L259.834 461.588C252.878 430.042 269.959 398.135 300.068 386.432L299.705 385.5ZM476.398 316.821L299.705 385.5L300.068 386.432L476.76 317.753L476.398 316.821ZM472.211 193.254C531.339 211.738 534.14 294.378 476.398 316.821L476.76 317.753C535.384 294.967 532.54 211.065 472.509 192.3L472.211 193.254ZM241.426 121.111L472.211 193.254L472.509 192.3L241.725 120.157L241.426 121.111ZM207.771 97.1414C216.159 108.502 227.947 116.898 241.426 121.111L241.725 120.157C228.448 116.007 216.838 107.738 208.575 96.5474L207.771 97.1414ZM156.021 27.056L207.771 97.1414L208.575 96.5474L156.825 26.462L156.021 27.056ZM147.586 -36.6667C139.263 -15.3872 142.448 8.67483 156.021 27.056L156.825 26.462C143.457 8.35724 140.32 -15.3429 148.517 -36.3025L147.586 -36.6667Z" fill="black"/>
                 </svg>
             
-            <svg id="green-thing" width="348" height="286" viewBox="0 0 348 286" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg data-aos="fade-up-right" data-aos-offset="300" data-aos-duration="1000" 
+            id="green-thing" width="348" height="286" viewBox="0 0 348 286" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0 286H347.585C345.445 278.02 340.976 267.046 334.837 251.969C322.677 222.11 303.967 176.163 283.826 105.529C235.075 -65.4434 88.8816 9.08787 0 67.8432V286Z" fill="#A0D2A1"/>
                     </svg>
                     
@@ -61,5 +47,7 @@
     
         </div>
     </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./page1.js"></script>
 </body>
 </html>
