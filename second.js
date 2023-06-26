@@ -1,8 +1,3 @@
-setTimeout(() => {
-    const loader = document.getElementsByClassName("loader_container")[0];
-    console.debug(loader)
-    loader.style.display  = "none"
-    }, 1500);
 
 // AOS.init();
 
@@ -262,4 +257,12 @@ console.log(ite)
             
         }
 
-    fetchData();
+fetchData().then( r => { 
+    const loader = document.getElementsByClassName("loader_container")[0];
+    console.debug(loader)
+    setTimeout(() =>{loader.style.display = "none"}  , 100)
+})
+
+
+    
+    

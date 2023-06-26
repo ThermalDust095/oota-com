@@ -6,11 +6,6 @@ console.log(item)
 
 document.getElementById('title').innerText = item
 
-setTimeout(() => {
-  const loader = document.getElementsByClassName("loader_container")[0];
-  console.debug(loader)
-  loader.style.display  = "none"
-}, 2000);
 
 handle_click(item)
 searchWikiBriefs(item)
@@ -87,6 +82,7 @@ async function handle_click(item){
         for(i=0;i<healthLabels;i==0){
 
           a = document.getElementById('green-list').createElement('li')
+          console.log(a)
             
         }
 
@@ -106,7 +102,10 @@ async function handle_click(item){
         console.log(recipe)
         document.getElementsByClassName('recipeShadow')[0].innerText = recipe
 
-    })
+        const loader = document.getElementsByClassName("loader_container")[0];
+        console.debug(loader)
+        setTimeout(() =>{loader.style.display = "none"}  , 500)
 
+    })
 }
 
