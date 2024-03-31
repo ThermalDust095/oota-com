@@ -2,6 +2,8 @@ let recipe;
 let params = new URL(document.location).searchParams;
 let item = params.get("item");
 
+const loader = document.getElementsByClassName("loader_container")[0];
+console.debug(loader);
 console.log(item);
 
 document.getElementById("title").innerText = item;
@@ -108,10 +110,6 @@ async function handle_click(item) {
     console.log(recipe);
     document.getElementsByClassName("recipeShadow")[0].innerText = recipe;
 
-    const loader = document.getElementsByClassName("loader_container")[0];
-    console.debug(loader);
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 500);
+    loader.style.display = "none";
   });
 }
